@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #e91e63;
+        }
+
+        p {
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Will You Be My Valentine?</h1>
+    <p>Dear Anushka Baby 😘,</p>
+
+    <!-- Button to Trigger Special Code -->
+<button onclick="startHeartAnimation()">Click Me </button>
+
+<script>
+    function startHeartAnimation() {
+        const myHeart = document.createElement('span');
+        myHeart.innerHTML = '❤';
+        document.body.appendChild(myHeart);
+        let loveInterval = setInterval(() => {
+            const xPos = Math.random() * window.innerWidth;
+            const yPos = Math.random() * window.innerHeight;
+            myHeart.style.position = 'absolute';
+            myHeart.style.left = xPos + 'px';
+            myHeart.style.top = yPos + 'px';
+        }, 100);
+    }
+</script>
+
+    <p>Would you be my valentine?</p>
+    <img src="https://media.tenor.com/LfVXeDuwInMAAAAM/dudububu-kiss.gif" alt="Valentine's Day Image">
+
+    <p>Looking forward to your response Baby!</p>
+
+    <footer>
+        <p>With love,</p>
+        <p>Apka bubu 😘</p>
+    </footer>
+</body>
+</html>
